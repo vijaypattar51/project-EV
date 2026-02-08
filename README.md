@@ -1,5 +1,5 @@
 📌Project Overview
-The EV Charging Station Locator is a web-based application designed to help electric vehicle users easily find nearby charging stations. It also provides a platform for charging station owners to register and manage their stations, making charging infrastructure more accessible and organized.
+- The EV Charging Station Locator is a web-based application designed to help electric vehicle users easily find nearby charging stations. It also provides a platform for charging station owners to register and manage their stations, making charging infrastructure more accessible and organized.
 
 ✨ Features
 -Locate nearby EV charging stations
