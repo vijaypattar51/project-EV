@@ -1,0 +1,133 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+}
+
+header .logo h1 {
+  color: #28a745;
+  font-size: 24px;
+}
+
+.map-profile-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: auto;
+  padding: 20px;
+}
+
+.profile {
+  flex: 1 1 35%;
+  min-width: 300px;
+  background: burlywood;
+  padding: 40px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile h2 {
+  font-size: 24px;
+  margin: 5px 0;
+}
+
+.profile p {
+  font-size: 18px;
+  color: #666;
+}
+
+.buttons button {
+  display: inline;
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.buttons .bookings {
+  background-color: #1A2A41;
+}
+
+.buttons .notifications {
+  background-color: #1A2A41;
+}
+
+.buttons .logout {
+  background-color: #1A2A41;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .map-profile-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #map {
+    width: 100%;
+    height: 250px;
+  }
+
+  .profile {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .profile img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile h2 {
+    font-size: 20px;
+  }
+
+  .profile p {
+    font-size: 16px;
+  }
+
+  .buttons button {
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header .logo h1 {
+    font-size: 20px;
+  }
+
+  .profile h2 {
+    font-size: 18px;
+  }
+
+  .profile p {
+    font-size: 14px;
+  }
+
+  .buttons button {
+    padding: 6px 10px;
+  }
+}
+#searchBox{
+  justify-content: center;
+  align-items: center;
+}

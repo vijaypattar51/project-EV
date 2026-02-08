@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>About - EV Locator</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+  <!-- <link href="usercss.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="ownercss.css">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="about-page">
+
+  <!-- Header Section -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">EV Spot</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="page-title dark-background">
+      <div class="container position-relative">
+        <h1>About</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">About</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Map and Profile Section -->
+    <section class="map-profile-section">
+        <div class="container-box">
+            <h2>Add New Charging Station</h2>
+            <form id="add-station-form" action="add_station.php" method="POST">
+              <div class="form-group">
+                <label for="station-name">Station Name</label>
+                <input type="text" id="station-name" name="station_name" class="form-control" placeholder="Enter station name" required>
+              </div>
+              <div class="form-group">
+                <label for="owner-email">Owner Email</label>
+                <input type="email" id="owner-email" name="owner_email" class="form-control" placeholder="Enter email address" required>
+              </div>
+              <div class="form-group">
+                <label for="phone-number">Phone Number</label>
+                <input type="text" id="phone-number" name="phone_number" class="form-control" placeholder="Enter phone number" required>
+              </div>
+              <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" class="form-control" placeholder="Enter location" required>
+              </div>
+              <div class="form-group">
+                <label for="city">city</label>
+                <input type="text" id="city" name="city" class="form-control" placeholder="Enter city" required>
+              </div>
+              <div class="form-group">
+                <label for="max-slots">Max Slots</label>
+                <input type="number" id="max-slots" name="slots" class="form-control" placeholder="Enter max slots" required>
+              </div>
+              <button type="submit" class="btn btn-success w-100" onclick="alert('Station added successfully')">Add Station</button>
+            </form>                           
+          </div>
+
+          <div class="container-box owner-profile">
+            <img src="businessman-profile-cartoon_18591-58479.avif" alt="Owner Profile Picture">
+            <h3>Owner</h3>
+            <div class="btn-container">
+              <form action="logout.php" method="post">
+                <button id="logout-btn">Logout</button>
+              </form>
+            </div>
+          </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <h2>Designed by Team EV Spot</h2>
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

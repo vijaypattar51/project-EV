@@ -1,0 +1,57 @@
+let map, infoWindow;
+
+function initMap() {
+    // Initialize the map centered on Mumbai
+    const mumbai = { lat: 19.0760, lng: 72.8777 };
+    map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: mumbai,
+    });
+
+    infoWindow = new google.maps.InfoWindow();
+
+    // List of sample locations
+    const locations = [
+        { name: "Parsi Staff Quarters", lat: 19.004, lng: 72.856 },
+        { name: "Worli Bus Depot", lat: 19.017, lng: 72.818 },
+        { name: "Raheja Artesia, Worli", lat: 18.994, lng: 72.816 },
+        { name: "IOCL - Fort Motors, Goregaon", lat: 19.155, lng: 72.842 },
+    ];
+
+    // Add markers to the map
+    locations.forEach(location => {
+        const marker = new google.maps.Marker({
+            position: { lat: location.lat, lng: location.lng },
+            map,
+            title: location.name,
+        });
+
+        marker.addListener("click", () => {
+            infoWindow.setContent(location.name);
+            infoWindow.open(map, marker);
+        });
+
+        // Add to sidebar
+        const listItem = document.createElement("li");
+        listItem.textContent = location.name;
+        listItem.addEventListener("click", () => {
+            map.setCenter(marker.getPosition());
+        });
+        document.getElementById("locations-list").appendChild(listItem);
+    });
+
+    // Search functionality
+    document.getElementById("search-box").addEventListener("input", (e) => {
+        const searchText = e.target.value.toLowerCase();
+        const listItems = document.querySelectorAll("#locations-list li");
+        listItems.forEach(item => {
+            if (item.textContent.toLowerCase().includes(searchText)) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    });
+}
+
+window.onload = initMap;

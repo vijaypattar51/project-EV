@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">    
+    <title>Document</title>
+    <link rel="stylesheet" href="dummy.css">
+</head>
+<body>
+
+<!-- User Login Form -->
+ <section>
+        <div id="userLoginForm" class="form-section">
+            <h2>User Login</h2>
+            <form action="login.php" method="POST">
+                <input type="hidden" name="role" value="user">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="Username" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <button class="submit-btn" type="submit">Login</button>
+                <p>Don't have an account? <a href="#" onclick="showForm('userRegister')">Register</a></p>
+                <p>Are you an Owner? <a href="#" onclick="showForm('ownerLogin')">Login as Owner</a></p>
+            </form>
+        </div>
+
+        <!-- Owner Login Form -->
+        <div id="ownerLoginForm" class="form-section" style="display: none;">
+            <h2>Owner Login</h2>
+            <form action="login.php" method="POST">
+                <input type="hidden" name="role" value="owner">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="Username" name="Username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <button class="submit-btn" type="submit">Login</button>
+                <p>Don't have an account? <a href="#" onclick="showForm('ownerRegister')">Register</a></p>
+                <p>Are you a User? <a href="#" onclick="showForm('userLogin')">Login as User</a></p>
+            </form>
+        </div>
+
+        <!-- User Registration Form -->
+        <div id="userRegisterForm" class="form-section" style="display: none;">
+            <h2>User Register</h2>
+            <form action="register.php" method="POST">
+                <input type="hidden" name="role" value="user">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="Email" name="Email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <button class="submit-btn" type="submit">Register</button>
+                <p>Already have an account? <a href="#" onclick="showForm('userLogin')">Login</a></p>
+            </form>
+        </div>
+
+        <!-- Owner Registration Form -->
+        <div id="ownerRegisterForm" class="form-section" style="display: none;">
+            <h2>Owner Register</h2>
+            <form action="register.php" method="POST">
+                <input type="hidden" name="role" value="owner">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="Email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <button class="submit-btn" type="submit">Register</button>
+                <p>Already have an account? <a href="#" onclick="showForm('ownerLogin')">Login</a></p>
+            </form>
+        </div>
+</section>
+
+</body>
+<script>
+    function showForm(formType) {
+    // Hide all forms
+    document.getElementById("userLoginForm").style.display = "none";
+    document.getElementById("ownerLoginForm").style.display = "none";
+    document.getElementById("userRegisterForm").style.display = "none";
+    document.getElementById("ownerRegisterForm").style.display = "none";
+
+    // Show the requested form
+    if (formType === "userLogin") {
+        document.getElementById("userLoginForm").style.display = "block";
+    } else if (formType === "ownerLogin") {
+        document.getElementById("ownerLoginForm").style.display = "block";
+    } else if (formType === "userRegister") {
+        document.getElementById("userRegisterForm").style.display = "block";
+    } else if (formType === "ownerRegister") {
+        document.getElementById("ownerRegisterForm").style.display = "block";
+    }
+}
+
+
+function togglePasswordVisibility() {
+    const passwordInput = document.getElementById("passwordInput");
+    const eyeIcon = document.getElementById("togglePassword");
+    
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+    } else {
+        passwordInput.type = "password";
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
+    }
+}
+
+</script>
+</html>

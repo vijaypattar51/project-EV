@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .header {
+    background: #007bff;
+    color: white;
+    padding: 15px;
+  }
+  
+  .sitename {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .navmenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navmenu li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+  
+  .navmenu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .page-title {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+  }
+  
+  .booking-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .booking-card {
+    display: flex;
+    gap: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .booking-image {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    justify-items: c;
+  }
+  
+  .booking-info h3 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .booking-info p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .book-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+  }
+
+  .booking-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    flex: 1 1 45%;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: flex-start; /* Aligns content to the top */
+    gap: 15px; /* Space between image and text */
+    position: relative; /* Ensures positioned elements stay inside */
+  }
+  
+  .booking-image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0; /* Prevents the image from resizing */
+    margin-left: auto; /* Pushes the image to the right */
+  }
+  
+  .booking-info {
+    flex: 1; /* Takes up remaining space */
+  }
+  
+  .book-btn {
+    background-color: #1A2A41;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    bottom: 20px; /* Positioned at bottom */
+    right: 20px; /* Positioned to the right */
+  }
+  
+  .book-btn:hover {
+    background-color: #0b3b57;
+  }
+  
+  
+  .book-btn:hover {
+    background-color: #0b3b57;
+  }
+  
+  
+  .book-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    text-align: center;
+    padding: 15px;
+    background: #007bff;
+    color: #fff;
+    position: relative;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .booking-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .booking-image {
+      margin: 0 auto;
+    }
+  }
+  

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Login-EV Spot</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="dummy.css">
+  
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="portfolio-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">EV Spot</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html" class="active">Login</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container position-relative">
+        <h1>Login</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <!-- <li class="current">Login</li> -->
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+
+
+    <section>
+      <div id="userLoginForm" class="form-section">
+          <h2>User Login</h2>
+          <form action="login.php" method="POST">
+              <input type="hidden" name="role" value="user">
+              <div class="input-group">
+                  <i class="fas fa-user"></i>
+                  <input type="Username" name="username" placeholder="Username" required>
+              </div>
+              <div class="input-group">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" name="password" placeholder="Password" required>
+              </div>
+              <button class="submit-btn" type="submit">Login</button>
+              <p>Don't have an account? <a href="#" onclick="showForm('userRegister')">Register</a></p>
+              <p>Are you an Owner? <a href="#" onclick="showForm('ownerLogin')">Login as Owner</a></p>
+          </form>
+      </div>
+
+      <!-- Owner Login Form -->
+      <div id="ownerLoginForm" class="form-section" style="display: none;">
+          <h2>Owner Login</h2>
+          <form action="login.php" method="POST">
+              <input type="hidden" name="role" value="owner">
+              <div class="input-group">
+                  <i class="fas fa-user"></i>
+                  <input type="Username" name="Username" placeholder="Username" required>
+              </div>
+              <div class="input-group">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" name="password" placeholder="Password" required>
+              </div>
+              <button class="submit-btn" type="submit">Login</button>
+              <p>Don't have an account? <a href="#" onclick="showForm('ownerRegister')">Register</a></p>
+              <p>Are you a User? <a href="#" onclick="showForm('userLogin')">Login as User</a></p>
+          </form>
+      </div>
+
+      <!-- User Registration Form -->
+      <div id="userRegisterForm" class="form-section" style="display: none;">
+          <h2>User Register</h2>
+          <form action="register.php" method="POST">
+              <input type="hidden" name="role" value="user">
+              <div class="input-group">
+                  <i class="fas fa-user"></i>
+                  <input type="text" name="username" placeholder="Username" required>
+              </div>
+              <div class="input-group">
+                  <i class="fas fa-envelope"></i>
+                  <input type="Email" name="Email" placeholder="Email" required>
+              </div>
+              <div class="input-group">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" name="password" placeholder="Password" required>
+              </div>
+              <button class="submit-btn" type="submit">Register</button>
+              <p>Already have an account? <a href="#" onclick="showForm('userLogin')">Login</a></p>
+          </form>
+      </div>
+
+      <!-- Owner Registration Form -->
+      <div id="ownerRegisterForm" class="form-section" style="display: none;">
+          <h2>Owner Register</h2>
+          <form action="register.php" method="POST">
+              <input type="hidden" name="role" value="owner">
+              <div class="input-group">
+                  <i class="fas fa-user"></i>
+                  <input type="text" name="username" placeholder="Username" required>
+              </div>
+              <div class="input-group">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" name="Email" placeholder="Email" required>
+              </div>
+              <div class="input-group">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" name="password" placeholder="Password" required>
+              </div>
+              <button class="submit-btn" type="submit">Register</button>
+              <p>Already have an account? <a href="#" onclick="showForm('ownerLogin')">Login</a></p>
+          </form>
+      </div>
+</section>
+  
+
+
+  <!-- Font Awesome Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    function selectRole(role) {
+        const userBtn = document.getElementById('userBtn');
+        const ownerBtn = document.getElementById('ownerBtn');
+        const loginTitle = document.getElementById('loginTitle');
+        const registerTitle = document.getElementById('registerTitle');
+    
+        if (role === 'user') {
+            userBtn.classList.add('active');
+            ownerBtn.classList.remove('active');
+            loginTitle.textContent = 'User Login';
+            registerTitle.textContent = 'User Register';
+        } else {
+            ownerBtn.classList.add('active');
+            userBtn.classList.remove('active');
+            loginTitle.textContent = 'Owner Login';
+            registerTitle.textContent = 'Owner Register';
+        }
+    }
+    
+    function showRegister() {
+        document.getElementById('loginForm').classList.remove('active');
+        document.getElementById('registerForm').classList.add('active');
+    }
+    
+    function showLogin() {
+        document.getElementById('registerForm').classList.remove('active');
+        document.getElementById('loginForm').classList.add('active');
+    }
+    
+    function togglePassword(inputId, iconId) {
+        const passwordInput = document.getElementById(inputId);
+        const icon = document.getElementById(iconId);
+    
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+        } else {
+            passwordInput.type = "password";
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+        }
+    }
+    </script>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+        </div>
+
+      <div class="credits">
+        <h2>Designed by team EV spot</h2> 
+      </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <!-- <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
+
+  <!-- Preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

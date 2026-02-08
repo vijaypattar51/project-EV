@@ -1,0 +1,67 @@
+/* General Styling for Input Group */
+.input-group {
+    position: relative;
+    margin-bottom: 20px; /* Space between input fields */
+}
+
+/* Styling for Input Fields */
+.input-group input {
+    width: 100%; /* Full width for input fields */
+    padding: 10px 40px 10px 35px; /* Space for icons */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none; /* Remove default browser outline */
+    transition: border-color 0.3s ease; /* Smooth border transition */
+    
+}
+
+/* Input Focus Style */
+.input-group input:focus {
+    border-color: #007bff; /* Blue border on focus */
+}
+
+/* Styling for Icons */
+.input-group .fas {
+    position: absolute; /* Absolute position relative to input group */
+    top: 50%; /* Center the icon vertically */
+    left: 10px; /* Add space to the left of the icon */
+    transform: translateY(-50%); /* Align icon perfectly in the middle */
+    font-size: 18px; /* Icon size */
+    color: #888; /* Neutral gray color for the icons */
+}
+
+/* Button Styling */
+.submit-btn {
+    width: 100%; /* Full width button */
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Card-like Container */
+.form-section {
+    max-width: 400px; /* Width of the card */
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    background-color: #fff; /* White background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card */
+}
+h2{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
