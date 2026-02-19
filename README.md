@@ -3,14 +3,14 @@
 
 ✨ Features
 -Locate nearby EV charging stations
--View station details such as location and availability
--Station owners can register and add their charging stations
--User-friendly and responsive web interface
+ ,View station details such as location and availability
+ ,Station owners can register and add their charging stations
+ ,User-friendly and responsive web interface
 
 🛠️ Technologies Used
--Frontend: HTML, CSS, JavaScript.
--Backend: XAAMP, PHP
--Database: MySQL.
+ ,Frontend: HTML, CSS, JavaScript.
+ ,Backend: XAAMP, PHP
+ ,Database: MySQL.
 
 👥 User Roles
 -Users: Search, locate and Book the slots in nearby EV charging stations 
