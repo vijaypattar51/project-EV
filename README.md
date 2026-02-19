@@ -13,8 +13,8 @@
  ,Database: MySQL.
 
 👥 User Roles
--Users: Search, locate and Book the slots in nearby EV charging stations 
--Station Owners: Register, add, and manage charging stations and its details.
+ ,Users: Search, locate and Book the slots in nearby EV charging stations 
+ ,Station Owners: Register, add, and manage charging stations and its details.
 
 🎯 Purpose
 This project was built to simplify the process of finding EV charging stations and to encourage station owners to contribute their locations, supporting the growth of electric vehicle infrastructure.
